@@ -1,4 +1,4 @@
-# gsos
+# WSOS
 
 A new Flutter project.
 
