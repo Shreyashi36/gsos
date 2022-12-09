@@ -28,6 +28,9 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   contacts_service: ^0.6.3
+  flutter_sound_lite: ^8.5.0
+  permission_handler: ^10.2.0
+  
   flutter:
     sdk: flutter
 
