@@ -12,16 +12,16 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
-      body: Container(
-          child: Column(children: [
-        getLogo(),
-
-        const SizedBox(
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              getLogo(),
+        
+              const SizedBox(
           height: 60,
-        ),
-
-        const SizedBox(
+              ),
+        
+              const SizedBox(
           width: 281,
           child: Text(
             "Sign Up",
@@ -31,106 +31,106 @@ class _SignUpState extends State<SignUp> {
                 fontSize: 30,
                 fontWeight: FontWeight.bold),
           ),
-        ),
-        const SizedBox(
+              ),
+              const SizedBox(
           height: 20,
-        ),
-
-        // REGISTER E-MAIL/PHONE NUMBER
-
-        Padding(
+              ),
+        
+              // REGISTER E-MAIL/PHONE NUMBER
+        
+              Padding(
           padding: const EdgeInsets.only(left: 35, right: 35),
           child: TextField(
             decoration: InputDecoration(
                 labelText: 'Email/Phone Number',
                 hintText: 'abc@gmail.com/98323xxxxx',
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10))),
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
           ),
-        ),
-        const SizedBox(
+              ),
+              const SizedBox(
           height: 20,
-        ),
-
-        // ENTER FULL NAME
-        Padding(
+              ),
+        
+              // ENTER FULL NAME
+              Padding(
           padding: const EdgeInsets.only(left: 35, right: 35),
           child: TextField(
             decoration: InputDecoration(
                 labelText: 'Full Name',
                 hintText: 'Ammy Greens',
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10))),
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
           ),
-        ),
-        const SizedBox(
+              ),
+              const SizedBox(
           height: 20,
-        ),
-
-        // TYPE THE WORKING PHONE NUMBER
-        Padding(
+              ),
+        
+              // TYPE THE WORKING PHONE NUMBER
+              Padding(
           padding: const EdgeInsets.only(left: 35, right: 35),
           child: TextField(
             obscureText: true,
             decoration: InputDecoration(
                 labelText: 'Phone Number',
                 hintText: '94747XXXXX',
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10))),
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
           ),
-        ),
-        const SizedBox(
+              ),
+              const SizedBox(
           height: 20,
-        ),
-
-        Padding(
+              ),
+        
+              Padding(
           padding: const EdgeInsets.only(left: 35, right: 35),
           child: TextField(
             obscureText: true,
             decoration: InputDecoration(
                 labelText: 'Full Name',
                 hintText: 'Ammy Greens',
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10))),
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
           ),
-        ),
-        const SizedBox(
+              ),
+              const SizedBox(
           height: 20,
-        ),
-
-        // ENTER A STRONG PASSWORD
-        Padding(
+              ),
+        
+              // ENTER A STRONG PASSWORD
+              Padding(
           padding: const EdgeInsets.only(left: 35, right: 35),
           child: TextField(
             obscureText: true,
             decoration: InputDecoration(
                 labelText: 'Password',
                 hintText: 'abc*332=4',
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10))),
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
           ),
-        ),
-        const SizedBox(
+              ),
+              const SizedBox(
           height: 20,
-        ),
-
-        // RE-TYPE  PASSWORD
-        Padding(
+              ),
+        
+              // RE-TYPE  PASSWORD
+              Padding(
           padding: const EdgeInsets.only(left: 35, right: 35),
           child: TextField(
             obscureText: true,
             decoration: InputDecoration(
                 labelText: 'Re-Type Password',
                 hintText: 'abc*332=4',
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10))),
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
           ),
-        ),
-        const SizedBox(
+              ),
+              const SizedBox(
           height: 20,
-        ),
-
-        const SizedBox(
+              ),
+        
+              const SizedBox(
           width: 281,
           child: Text(
             "By Signing up, you agree to our Terms and Conditions and our Privacy Policy. ",
@@ -140,9 +140,9 @@ class _SignUpState extends State<SignUp> {
               fontSize: 15,
             ),
           ),
-        ),
-
-        Padding(
+              ),
+        
+              Padding(
           padding: const EdgeInsets.all(50),
           child: ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -160,9 +160,9 @@ class _SignUpState extends State<SignUp> {
                     fontSize: 28);
                 Navigator.pushNamed(context, 'about');
               }),
-        ),
-      ])),
-    );
+              ),
+            ]),
+        ));
   }
 }
 
