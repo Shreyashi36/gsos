@@ -10,5 +10,3 @@ class SoundRecorder {
     await _audioRecorder!.startRecorder(toFile: pathToSaveAudio);
   }
 }
-
-Future _stop
