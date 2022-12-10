@@ -12,56 +12,55 @@ class _AboutWsosState extends State<AboutWsos> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.all(10),
-        child: Column(children: [
-          getLogo(),
-
-          getImg(),
-
-          const SizedBox(
-            width: 352,
-            height: 100,
-            child: Text(
-              "WSOS is an application that informs users of their location's safety status. Also with the help of features in this app such as live location and audio, you can track people during potentially dangerous situations. Know more About us here",
-              style: TextStyle(
-                fontSize: 18,
-                fontFamily: "Poppins",
-                fontWeight: FontWeight.w500,
+        margin: EdgeInsets.all(20),
+        child: SingleChildScrollView(
+          child: Column(children: [
+            getLogo(),
+            getImg(),
+            const SizedBox(
+              // width: 352,
+              // height: 100,
+              child: Text(
+                "WSOS is an application that informs users of their location's safety status. Also with the help of features in this app such as live location and audio, you can track people during potentially dangerous situations. Know more About us here.",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontFamily: "Poppins",
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ),
-          ),
-           SizedBox(
-            height: 20,
-          ),
-
-          Padding(
-            padding: const EdgeInsets.all(50),
-            child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(312, 42),
-                  textStyle: TextStyle(fontSize: 28),
-                  primary: Color(0xfffd7d96),
-                  onPrimary: Colors.white,
-                ),
-                child: Text('About Us'),
-                onPressed: () {}),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(50),
-            child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(312, 42),
-                  textStyle: TextStyle(fontSize: 20),
-                  primary: Color(0xfffd7d96),
-                  onPrimary: Colors.white,
-                ),
-                child: Text('Add/Edit your Details here'),
-                onPressed: () {}),
-          )
-        ]),
+            SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(312, 42),
+                    textStyle: TextStyle(fontSize: 28),
+                    primary: Color(0xfffd7d96),
+                    onPrimary: Colors.white,
+                  ),
+                  child: Text('About Us'),
+                  onPressed: () {}),
+            ),
+            
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(312, 42),
+                    textStyle: TextStyle(fontSize: 20),
+                    primary: Color(0xfffd7d96),
+                    onPrimary: Colors.white,
+                  ),
+                  child: Text('Add/Edit your Details here'),
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'Add_your_details');
+                  }),
+            )
+          ]),
+        ),
       ),
     );
   }
@@ -84,5 +83,5 @@ Widget getImg() {
     width: 354.54,
     height: 300.0,
   );
-  return Container(child: image, margin: EdgeInsets.all(30.0));
+  return Container(child: image, margin: EdgeInsets.all(20.0));
 }
