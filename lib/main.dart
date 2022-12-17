@@ -3,6 +3,7 @@ import 'dart:js';
 import 'package:flutter/material.dart';
 import 'package:gsos/screens/about.dart';
 import 'package:gsos/screens/sign_up.dart';
+import 'package:gsos/screens/start_page.dart';
 // import 'package:gsos/screens/welcome_page.dart';
 import './screens/home.dart';
 import './screens/login.dart';
@@ -14,8 +15,9 @@ void main() {
     debugShowCheckedModeBanner: false,
     title:"WSOS",
     color: Colors.pink[200],
-    home: WelcomePage(),
+    home: StartPage(),
     routes: {
+    'welcomepage':(context) => WelcomePage(),
     'login': (context) => Mylogin(),
     'signup':(context) => SignUp(),
     'about':(context) => AboutWsos(),
